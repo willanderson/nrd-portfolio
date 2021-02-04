@@ -1,0 +1,27 @@
+dateModified: 1612475696
+email:
+  fromEmail: wmaxand@gmail.com
+  fromName: CraftMamp
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+system:
+  edition: solo
+  live: true
+  name: 'Nora Deligter'
+  retryDuration: null
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

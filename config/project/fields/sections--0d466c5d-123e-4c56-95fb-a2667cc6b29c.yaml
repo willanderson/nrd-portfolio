@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: b729f8c2-6fbf-49b5-9428-60db6a9ec52c
+handle: sections
+instructions: ''
+name: Sections
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_sections}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

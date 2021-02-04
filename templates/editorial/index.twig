@@ -1,0 +1,31 @@
+{% extends "_layout" %}
+
+{% block title %}
+  {{ parent() }} | Editorial
+{% endblock %}
+
+{% set posts = craft.entries.section('editorial').orderBy('date desc').all() %}
+
+
+{% block content %}
+  <div class="fixed-container center">
+    <div class="table mt4">
+
+    {% for post in posts %}
+
+      {% set thumbnail = post.thumbnail.one() %}
+      <div class="row green">
+        <div class="flex main">
+            <div class="mr3 image-hold" style="background-image: url('{{ thumbnail.url }}');"></div>
+
+          <a target="_blank" {% if post.externalLink %} href="{{ post.externalLink }}" {% endif %} class="title no-underline">{{ post.title | truncate(95) }}</a>
+        </div>
+        <p class="publication tr">{{ post.client }}</p>
+        <p class="date tr">{{ post.date | date('M d, Y') }}</p>
+      </div>
+
+    {% endfor %}
+
+    </div>
+  </div>
+{% endblock %}

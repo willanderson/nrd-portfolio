@@ -1,0 +1,38 @@
+fieldLayouts:
+  aa06ee47-833d-4bb3-ba95-8726d803c0e9:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: editorial
+hasUrls: true
+name: Editorial
+settings:
+  path: '@webroot/assets/editorial'
+sortOrder: 1
+type: craft\volumes\Local
+url: '@web/assets/editorial'

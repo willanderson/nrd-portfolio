@@ -1,0 +1,9 @@
+{% extends "_layout" %}
+
+{% block content %}
+<div class="fixed-container center">
+  <p class="text-block f1 serif red">
+    {{ entry.paragraph | striptags('<a><b><em><strong><img>') | raw }}
+  </p>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+contentColumnType: datetime
+fieldGroup: b729f8c2-6fbf-49b5-9428-60db6a9ec52c
+handle: date
+instructions: ''
+name: Date
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: '30'
+  showDate: true
+  showTime: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

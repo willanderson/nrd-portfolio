@@ -1,0 +1,7 @@
+{% macro ratio(width, height) %}
+    {% if width / height > 1 %}
+      <h1>it's vertical</h1>
+    {% else %}
+      <h1>it's horizontal</h1>
+    {% endif %}>
+{% endmacro %}

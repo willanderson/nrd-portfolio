@@ -1,0 +1,29 @@
+{% macro span(target) %}
+{% set count = target|length %}
+    {% if count >= 3 %}
+      span-1
+
+    {% elseif count == 2 %}
+      span-2
+
+    {% else %}
+      span-4
+    {% endif %}>
+{% endmacro %}
+
+{% macro ratio(width, height, reference) %}
+
+{% if 'iframe' in reference %}
+    {% if width / height < 1 %}
+      aspect-ratio_4x5
+    {% else %}
+      aspect-ratio_16x9
+    {% endif %}>
+{% endif %}    
+{% endmacro %}
+
+{% macro checkhtml(code) %}
+  {% if "iframe" in code %}
+    <h1>It's an iFrame</h1>
+  {% endif %}
+{% endmacro %}

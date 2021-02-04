@@ -1,0 +1,28 @@
+{% extends "_layout" %}
+{% set posts = craft.entries.section('video').orderBy('date desc').all() %}
+
+{% block content %}
+  <section class="work-all">
+    <div class="fixed-container center grid mt4">
+      {% for post in posts %}
+
+        <div>
+
+          {% if post.thumbnail | length %}
+            {% set thumbnail = post.thumbnail.one() %}
+            <a class="no-underline" href="{{ post.url }}">
+              <img class="thumbnail" src="{{thumbnail.url}}"/>
+            </a>
+            {% endif %}
+
+            <a class="no-underline" href="{{ post.url }}">
+              <h3 class="ma0 mt2">{{post.client}}{% if post.client %}: {% endif %}{{ post.title|truncate(60) }}</h3>
+            </a>
+            <h4 class="ma0 gray mt2">{{ post.role.one() }}</h4>
+
+
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endblock %}

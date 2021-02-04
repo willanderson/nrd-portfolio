@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: b729f8c2-6fbf-49b5-9428-60db6a9ec52c
+handle: client
+instructions: ''
+name: Client
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: editorial
+name: Editorial
+propagationMethod: all
+siteSettings:
+  9e92814a-721a-4b15-ad0e-5862784c6bd0:
+    enabledByDefault: true
+    hasUrls: true
+    template: editorial/index
+    uriFormat: 'editorial/{slug}'
+type: channel

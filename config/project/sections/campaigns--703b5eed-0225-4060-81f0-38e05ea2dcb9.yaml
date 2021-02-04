@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: campaigns
+name: Campaigns
+propagationMethod: all
+siteSettings:
+  9e92814a-721a-4b15-ad0e-5862784c6bd0:
+    enabledByDefault: true
+    hasUrls: true
+    template: campaigns/_entry
+    uriFormat: 'campaign/{slug}'
+type: channel

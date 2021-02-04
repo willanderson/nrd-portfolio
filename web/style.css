@@ -1,0 +1,321 @@
+* {
+  font-family: sans-serif;
+}
+
+ul, li {
+  display: inline-block;
+  line-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  font-family: inherit;
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 24px;
+  padding: 0px;
+}
+
+.serif {
+  font-family: "Times New Roman";
+}
+
+.red {
+  color: #FF000E;
+}
+
+.green {
+  color: #019C49;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.vh-calc-100 {
+    height: calc(100vh - 75px);
+}
+
+.hr {
+  border-top: 1px solid black;
+  margin-top: 16px;
+}
+
+/* Color Blocks */
+
+.editorial {
+  background-color: #F8FEFA;
+  color: #019C49;
+}
+
+.contact {
+  background-color: #fff1f3;
+  color: #FF000E;
+}
+
+
+nav {
+  background-color: inherit;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav li {
+  padding-right: 16px;
+}
+
+.fixed-container {
+  width: 100%;
+  max-width: 1080px;
+  padding: 8px 16px;
+}
+
+/* Featured */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(autofill);
+  grid-gap: 32px;
+}
+
+.featured-work .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(autofill);
+  grid-gap: 32px;
+}
+
+.work-all .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(autofill);
+  grid-gap: 32px;
+}
+
+.grid-col-100 {
+  grid-column: auto / span 4;
+}
+
+.grid-col-50 {
+  grid-column: auto / span 2;
+}
+
+.work-item video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.work-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+.text-block img {
+  vertical-align: middle;
+  zoom: 50%;
+  margin: 0 24px;
+}
+
+.text-block {
+  line-height: 135%;
+}
+
+.table .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 8px;
+  padding: 16px 0;
+  border-bottom: 1px solid #019C49;
+}
+
+.table .row p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.table .image-hold {
+  width: 56px;
+  height: 56px;
+  background-size: cover;
+  background-position: center;
+  background-color: #019C49;
+  /* background-blend-mode: overlay, normal; */
+  flex-shrink: 0;
+}
+
+.table .row .main {
+  grid-column: auto / span 2;
+}
+
+.title::after {
+  content: " ↗";
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+/* Directing */
+
+.clip-hold {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.clipData {
+  background: #f0f0f0;
+  opacity: 0;
+  transition: all 0.14s ease-in;
+  mix-blend-mode: difference;
+}
+
+.clipData h2 {
+  text-decoration: none;
+}
+
+.clipData:hover {
+  opacity: 1;
+}
+
+/* .iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+
+.col-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.col-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.col-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.row {
+  margin-top: 40px;
+
+}
+
+/* .col-2 .iframe-container {
+  position: relative;
+  padding-bottom: 0;
+  height: 100%;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+
+.col-2 .iframe-container {
+  display: flex;
+  padding-bottom: 0;
+  height: 100%;
+}
+
+.iframe-container iframe {
+
+}
+
+/* Agency Grid */
+
+.agency-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 32px;
+  row-gap: 40px;
+}
+
+.agency-grid .frame-wrapper {
+  position: relative;
+}
+
+.frame-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.frame-wrapper video {
+  width: 100%;
+  height: auto;
+  padding-top: 0 !important;
+}
+
+.agency-grid .span-1 {
+  grid-column: auto / span 1;
+}
+
+.agency-grid .span-2 {
+  grid-column: auto / span 2;
+}
+
+.agency-grid .span-3 {
+  grid-column: auto / span 3;
+}
+
+.agency-grid .span-4 {
+  grid-column: auto / span 4;
+}
+
+.aspect-ratio_16x9 {
+  padding-top: calc(9 / 16 * 100%);
+}
+
+.aspect-ratio_4x5 {
+  padding-top: calc(5 / 4 * 100%);
+}
+
+.img-wrapper img {
+  width: 100%;
+
+}
+
+/* Work Index */
+
+.thumbnail {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.thumb-campaigns {
+  height: 400px;
+}
+
+.no-underline h3:hover {
+  text-decoration: underline;
+}

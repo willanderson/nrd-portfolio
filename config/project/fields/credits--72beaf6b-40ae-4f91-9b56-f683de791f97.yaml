@@ -1,0 +1,57 @@
+contentColumnType: text
+fieldGroup: b729f8c2-6fbf-49b5-9428-60db6a9ec52c
+handle: credits
+instructions: ''
+name: Credits
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Role
+            -
+              - handle
+              - creditsRole
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Name
+            -
+              - handle
+              - creditsName
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - Agency
+        -
+          - col2
+          - ''
+  maxRows: ''
+  minRows: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

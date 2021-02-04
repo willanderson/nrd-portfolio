@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: b729f8c2-6fbf-49b5-9428-60db6a9ec52c
+handle: role
+instructions: ''
+name: Role
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:c40b2bfd-2b3c-4d7a-8973-92eca28355a3'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

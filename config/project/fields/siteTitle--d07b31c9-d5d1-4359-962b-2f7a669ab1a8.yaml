@@ -1,0 +1,18 @@
+contentColumnType: string(120)
+fieldGroup: 90080efc-be99-4a29-87c9-88623c1200e7
+handle: siteTitle
+instructions: 'Edit your site''s title'
+name: 'Site Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 30
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Add a title'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

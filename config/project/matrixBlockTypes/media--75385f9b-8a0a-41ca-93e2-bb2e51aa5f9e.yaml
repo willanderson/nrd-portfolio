@@ -1,0 +1,53 @@
+field: 0d466c5d-123e-4c56-95fb-a2667cc6b29c
+fieldLayouts:
+  512ccb1b-c047-48de-83cb-74a27abca66e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 8bead974-8a62-4b51-8ce0-2eabe8ac1c4d
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  8bead974-8a62-4b51-8ce0-2eabe8ac1c4d:
+    contentColumnType: string
+    fieldGroup: null
+    handle: assets
+    instructions: ''
+    name: Assets
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:8182eadf-ef29-4df4-b0b7-ff9afd8a6d8a'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:8182eadf-ef29-4df4-b0b7-ff9afd8a6d8a'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: media
+name: Media
+sortOrder: 1

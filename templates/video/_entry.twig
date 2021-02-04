@@ -1,0 +1,12 @@
+{% extends "_layout" %}
+{% block content %}
+{% set vid = craft.embeddedAssets.get(entry.videoEmbed.one()) %}
+
+
+  <div class="fixed-container center">
+    <div class="iframe-container">
+      {{ vid.getVideoCode(['portrait=0', 'autoplay=1', 'byline=0', 'title=0', 'color=fff', 'playsinline=1']) }}
+    </div>
+  </div>
+
+{% endblock %}

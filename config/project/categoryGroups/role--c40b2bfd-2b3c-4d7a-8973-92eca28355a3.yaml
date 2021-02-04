@@ -1,0 +1,40 @@
+fieldLayouts:
+  c7b6db94-a610-4b91-8bb7-6f54b908f19d:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: role
+name: Role
+siteSettings:
+  9e92814a-721a-4b15-ad0e-5862784c6bd0:
+    hasUrls: true
+    template: work/_entry
+    uriFormat: 'work/{slug}'
+structure:
+  maxLevels: 1
+  uid: c8d6ce19-2bbf-43da-b49a-8cfe4c4d6c82
