@@ -35,25 +35,6 @@ return [
         'disallowRobots' => true,
     ],
 
-    'localhost' => array(
-        'devMode' => true,
-        'siteUrl' => 'http://localhost:8888/',
-        'environmentVariables' => array(
-            'basePath' => '/users/will/Projects/craft/web/',
-            'baseUrl'  => 'http://localhost/',
-          ),
-          'testToEmailAddress' => 'wmaxand@gmail.com',
-        ),
-
-        // Use IP address of your droplet below
-      '12.34.56.78' => array(
-        'siteUrl' => 'http://167.99.234.217/',
-        'environmentVariables' => array(
-          'basePath' => '/var/www/web/',
-          'baseUrl'  => 'http://167.99.234.217/',
-        )
-      )
-
     // Staging environment settings
     'staging' => [
         // Set this to `false` to prevent administrative changes from being made on Staging
