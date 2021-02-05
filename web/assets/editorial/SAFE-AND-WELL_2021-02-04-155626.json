@@ -1,0 +1,68 @@
+{
+    "title": "SAFE AND WELL",
+    "description": "Exclusive release with Nakid Magazine: \nhttps://nakid.online/2021/01/26/safe-well-short-film-written-directed-by-faye-tsakas-nora-deligter/\n\nShot on 16mm film, “SAFE AND WELL” is a satirical exploration of the language of\nwellness set within the context of our “stay at home” confinement. The film invites the viewer to follow along on a seemingly familiar and mundane exercise journey that swiftly devolves into a more paranoid and anxious reflection of the present moment.",
+    "url": "https://vimeo.com/470284469",
+    "type": "video",
+    "tags": [],
+    "feeds": [],
+    "images": [
+        {
+            "url": "https://i.vimeocdn.com/video/979747899_1280.jpg",
+            "width": 1280,
+            "height": 720,
+            "size": 921600,
+            "mime": "image/jpeg"
+        },
+        {
+            "url": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F979747899_1280x720.jpg&src1=https%3A%2F%2Ff.vimeocdn.com%2Fimages_v6%2Fshare%2Fplay_icon_overlay.png",
+            "width": 1280,
+            "height": 720,
+            "size": 921600,
+            "mime": "image/jpeg"
+        }
+    ],
+    "image": "https://i.vimeocdn.com/video/979747899_1280.jpg",
+    "imageWidth": 1280,
+    "imageHeight": 720,
+    "code": "<iframe src=\"https://player.vimeo.com/video/470284469?app_id=122963\" width=\"1920\" height=\"1080\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen title=\"SAFE AND WELL\"></iframe>",
+    "width": 1920,
+    "height": 1080,
+    "aspectRatio": 56.25,
+    "authorName": "Faye Tsakas",
+    "authorUrl": "https://vimeo.com/user41006705",
+    "providerIcons": [
+        {
+            "url": "https://vimeo.com/favicon.ico",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/vnd.microsoft.icon"
+        },
+        {
+            "url": "https://i.vimeocdn.com/favicon/main-touch_180",
+            "width": 180,
+            "height": 180,
+            "size": 32400,
+            "mime": null
+        },
+        {
+            "url": "https://f.vimeocdn.com/images_v6/favicon.ico?995c1f26ceb73961f8ac36a457df49d020d2fe5b",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/vnd.microsoft.icon"
+        },
+        {
+            "url": "https://i.vimeocdn.com/favicon/main-touch_144",
+            "width": 144,
+            "height": 144,
+            "size": 20736,
+            "mime": null
+        }
+    ],
+    "providerIcon": "https://i.vimeocdn.com/favicon/main-touch_180",
+    "providerName": "Vimeo",
+    "providerUrl": "https://vimeo.com/",
+    "publishedTime": null,
+    "license": null
+}

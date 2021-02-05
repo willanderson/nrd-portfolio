@@ -1,0 +1,68 @@
+{
+    "title": "AT&T \"Lauren Halsey\" :60",
+    "description": "This is \"AT&T \"Lauren Halsey\" :60\" by Tyler Temple Higgins on Vimeo, the home for high quality videos and the people who love them.",
+    "url": "https://vimeo.com/390590390",
+    "type": "video",
+    "tags": [],
+    "feeds": [],
+    "images": [
+        {
+            "url": "https://i.vimeocdn.com/video/854776487_640.jpg",
+            "width": 640,
+            "height": 360,
+            "size": 230400,
+            "mime": "image/jpeg"
+        },
+        {
+            "url": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F854776487_1280x720.jpg&src1=https%3A%2F%2Ff.vimeocdn.com%2Fimages_v6%2Fshare%2Fplay_icon_overlay.png",
+            "width": 1280,
+            "height": 720,
+            "size": 921600,
+            "mime": "image/jpeg"
+        }
+    ],
+    "image": "https://i.vimeocdn.com/video/854776487_640.jpg",
+    "imageWidth": 640,
+    "imageHeight": 360,
+    "code": "<iframe src=\"https://player.vimeo.com/video/390590390?app_id=122963\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen title=\"AT&amp;amp;T &amp;quot;Lauren Halsey&amp;quot; :60\"></iframe>",
+    "width": 640,
+    "height": 360,
+    "aspectRatio": 56.25,
+    "authorName": "Tyler Temple Higgins",
+    "authorUrl": "https://vimeo.com/user2132039",
+    "providerIcons": [
+        {
+            "url": "https://vimeo.com/favicon.ico",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/vnd.microsoft.icon"
+        },
+        {
+            "url": "https://i.vimeocdn.com/favicon/main-touch_180",
+            "width": 180,
+            "height": 180,
+            "size": 32400,
+            "mime": null
+        },
+        {
+            "url": "https://f.vimeocdn.com/images_v6/favicon.ico?809da922139e59a80a166b2210056e596db36f99",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/vnd.microsoft.icon"
+        },
+        {
+            "url": "https://i.vimeocdn.com/favicon/main-touch_144",
+            "width": 144,
+            "height": 144,
+            "size": 20736,
+            "mime": null
+        }
+    ],
+    "providerIcon": "https://i.vimeocdn.com/favicon/main-touch_180",
+    "providerName": "Vimeo",
+    "providerUrl": "https://vimeo.com/",
+    "publishedTime": null,
+    "license": null
+}

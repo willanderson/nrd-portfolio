@@ -1,0 +1,89 @@
+{
+    "title": "My Shoes. My Way. Fall 2018",
+    "description": "Fall shoes for the whole family, your way.  Find the perfect fall shoes, boots, slippers and everything in between at DSW.Visit us at: https://www.dsw.com/en...",
+    "url": "https://www.youtube.com/watch?v=6zKWHe7ezic",
+    "type": "video",
+    "tags": [
+        "video",
+        "sharing",
+        "camera phone",
+        "video phone",
+        "free",
+        "upload"
+    ],
+    "feeds": [],
+    "images": [
+        {
+            "url": "https://i.ytimg.com/vi/6zKWHe7ezic/hqdefault.jpg",
+            "width": 480,
+            "height": 360,
+            "size": 172800,
+            "mime": "image/jpeg"
+        },
+        {
+            "url": "https://i.ytimg.com/vi/6zKWHe7ezic/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720,
+            "size": 921600,
+            "mime": "image/jpeg"
+        }
+    ],
+    "image": "https://i.ytimg.com/vi/6zKWHe7ezic/hqdefault.jpg",
+    "imageWidth": 480,
+    "imageHeight": 360,
+    "code": "<iframe width=\"1920\" height=\"1080\" src=\"https://www.youtube.com/embed/6zKWHe7ezic?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+    "width": 1920,
+    "height": 1080,
+    "aspectRatio": 56.25,
+    "authorName": "DSW Designer Shoe Warehouse",
+    "authorUrl": "https://www.youtube.com/user/dswshoewarehouse",
+    "providerIcons": [
+        {
+            "url": "https://www.youtube.com/favicon.ico",
+            "width": 16,
+            "height": 16,
+            "size": 256,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://www.youtube.com/s/desktop/513409db/img/favicon.ico",
+            "width": 16,
+            "height": 16,
+            "size": 256,
+            "mime": "image/x-icon"
+        },
+        {
+            "url": "https://www.youtube.com/s/desktop/513409db/img/favicon_32.png",
+            "width": 32,
+            "height": 32,
+            "size": 1024,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://www.youtube.com/s/desktop/513409db/img/favicon_48.png",
+            "width": 48,
+            "height": 48,
+            "size": 2304,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://www.youtube.com/s/desktop/513409db/img/favicon_96.png",
+            "width": 96,
+            "height": 96,
+            "size": 9216,
+            "mime": "image/png"
+        },
+        {
+            "url": "https://www.youtube.com/s/desktop/513409db/img/favicon_144.png",
+            "width": 144,
+            "height": 144,
+            "size": 20736,
+            "mime": "image/png"
+        }
+    ],
+    "providerIcon": "https://www.youtube.com/s/desktop/513409db/img/favicon_144.png",
+    "providerName": "YouTube",
+    "providerUrl": "https://www.youtube.com/",
+    "publishedTime": "2018-09-21",
+    "license": null
+}
