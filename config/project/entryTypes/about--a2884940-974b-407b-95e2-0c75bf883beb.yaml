@@ -37,9 +37,9 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: contact
+handle: about
 hasTitleField: false
-name: Contact
+name: About
 section: db1fcc91-ecc4-4349-9e09-6a579c5b9ba1
 sortOrder: 1
 titleFormat: '{section.name|raw}'
