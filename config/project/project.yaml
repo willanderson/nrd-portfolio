@@ -1,4 +1,4 @@
-dateModified: 1612559613
+dateModified: 1612560017
 email:
   fromEmail: wmaxand@gmail.com
   fromName: CraftMamp
@@ -35,8 +35,8 @@ plugins:
       doAccessKey: EXEHQLKLAMT7IDO63ZAB
       doRegionName: 'New York'
       doSecretKey: +g/VX0LHjfxGF9Yhrr8pazcLj0o+w/PEQZM4B1VUgRY
-      doSpacesName: nrd-portfolio
-      doSpacesPath: /
+      doSpacesName: lamp-ubuntu-s-1vcpu-1gb-nyc1-01
+      doSpacesPath: ''
       dropboxAccessToken: ''
       dropboxAppKey: ''
       dropboxFolder: ''
