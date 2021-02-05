@@ -1,0 +1,31 @@
+{
+    "name": "weareferal/remote-core",
+    "description": "Backend module for remote-sync and remote-backup",
+    "type": "craft-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Timmy O'Mahony",
+            "homepage": "https://weareferal.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+            "weareferal\\remotecore\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Remote Core",
+        "handle": "remote-core",
+        "changelogUrl": "https://raw.githubusercontent.com/weareferal/craft-remote-core/master/CHANGELOG.md",
+        "class": "weareferal\\remotecore\\RemoteCoreModule"
+    },
+    "suggest": {
+        "aws/aws-sdk-php": "Required for AWS S3 or Digital Ocean Spaces usage",
+        "kunalvarma05/dropbox-php-sdk": "Required for Dropbox usage",
+        "google/apiclient": "Required for Google Drive usage"
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "name": "weareferal/remote-sync",
+    "description": "Sync your database and assets across Craft environments",
+    "type": "craft-plugin",
+    "version": "1.4.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "sync"
+    ],
+    "support": {
+        "docs": "https://github.com/weareferal/craft-remote-sync/blob/master/README.md",
+        "issues": "https://github.com/weareferal/craft-remote-sync/issues"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Timmy O'Mahony",
+            "homepage": "https://weareferal.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "weareferal/remote-core": "1.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "weareferal\\remotesync\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Remote Sync",
+        "handle": "remote-sync",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/weareferal/craft-remote-sync/master/CHANGELOG.md",
+        "class": "weareferal\\remotesync\\RemoteSync"
+    },
+    "suggest": {
+        "aws/aws-sdk-php": "Required for AWS S3 or Digital Ocean Spaces usage",
+        "kunalvarma05/dropbox-php-sdk": "Required for Dropbox usage",
+        "google/apiclient": "Required for Google Drive usage"
+    }
+}

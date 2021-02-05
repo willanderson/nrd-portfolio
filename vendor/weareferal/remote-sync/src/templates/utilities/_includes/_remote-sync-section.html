@@ -1,0 +1,51 @@
+<section id="{{ id }}" class='rb-utilities-section'
+    data-label="{{ label }}"
+    data-label-plural="{{ labelPlural }}"
+    data-pull-message="{{ pullMessage }}"
+    data-delete-message="{{ deleteMessage }}"
+>
+    <h2 data-icon="{{ icon }}">{{ "Remote " ~ labelPlural|t('remote-sync') }}</h2>
+    <table class="data fullwidth rb-utilities-table rb-utilities-table--collapsed"
+        data-list-action="{{ listAction }}"
+        data-push-action="{{ pushAction }}"
+        data-pull-action="{{ pullAction }}"
+        data-delete-action="{{ deleteAction }}">
+        <tbody>
+            <tr class="first default-row template-row">
+                <td class="light"></td>
+                <td class="thin">
+                    <button class="btn small pull-button" title="{{ 'Pull and restore ' ~ label|lower|t }}">{{ 'Pull & Restore'|t }}</button>
+                </td>
+                <td class="thin">
+                    <button class="btn small delete-button" title="{{ 'Delete ' ~ label|lower|t }}">{{ 'Delete'|t }}</button>
+                </td>
+            </tr>
+            <tr class="default-row no-results-row">
+                <td class="light">
+                    {{ "No " ~ labelPlural|t('remote-sync') }}
+                </td>
+            </tr>
+            <tr class="default-row errors-row">
+                <td class="error">
+                    {{ "Error Fetching " ~ labelPlural|t('remote-sync') }}
+                </td>
+            </tr>
+            <tr class="last default-row show-all-row">
+                <td>
+                    <a class="light" href="">{{ "Show All"|t('remote-sync') }}</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <form class="rb-utilities-form" method="post">
+        {{ csrfInput() }}
+        <div class='rb-utilities-submit'>
+            <input class="btn submit {{ not disabled ? '' : 'disabled' }}" type="submit" value="{{ 'Push ' ~ label|t('remote-sync') }}">
+            <div class="utility-status"></div>
+        </div>
+    </form>
+    <div class="rb-utilities-overlay">
+        <img src="{{ craft.app.getAssetManager().getPublishedUrl('@app/web/assets/cp/dist', true, 'images/spinner.gif')}}">
+    </div>
+    {% block message %}{% endblock %}
+</section>
