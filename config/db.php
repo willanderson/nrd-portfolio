@@ -16,8 +16,8 @@ return [
     'server' => App::env('DB_SERVER'),
     'port' => App::env('DB_PORT'),
     'database' => App::env('DB_DATABASE'),
-    'user' => App::env('DB_USER'),
-    'password' => App::env('DB_PASSWORD'),
+    'user' => 'craftcms',
+    'password' => 'Traprock10956!!',
     'schema' => App::env('DB_SCHEMA'),
     'tablePrefix' => App::env('DB_TABLE_PREFIX'),
 ];

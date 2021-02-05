@@ -1,9 +1,17 @@
-dateModified: 1612475696
+dateModified: 1612486608
 email:
   fromEmail: wmaxand@gmail.com
   fromName: CraftMamp
   transportType: craft\mail\transportadapters\Sendmail
 plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
+  dospaces:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   embeddedassets:
     edition: standard
     enabled: true
@@ -12,6 +20,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  remote-sync:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true

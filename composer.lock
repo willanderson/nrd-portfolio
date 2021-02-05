@@ -4,8 +4,71 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "87eb41d4491bb750d28f83abe6ad47d6",
+    "content-hash": "f9cbd5b9903fcd5b0a80c6d9a9a73922",
     "packages": [
+        {
+            "name": "aws/aws-sdk-php",
+            "version": "3.173.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1ab4f565744aea8e9560ee8aaffb19b87238c7d5",
+                "reference": "1ab4f565744aea8e9560ee8aaffb19b87238c7d5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "ext-simplexml": "*",
+                "guzzlehttp/guzzle": "^5.3.3|^6.2.1|^7.0",
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.4.1",
+                "mtdowling/jmespath.php": "^2.5",
+                "php": ">=5.5"
+            },
+            "suggest": {
+                "aws/aws-php-sns-message-validator": "To validate incoming SNS notifications",
+                "doctrine/cache": "To use the DoctrineCacheAdapter",
+                "ext-curl": "To send requests using cURL",
+                "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
+                "ext-sockets": "To use client-side monitoring"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aws\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Amazon Web Services",
+                    "homepage": "http://aws.amazon.com"
+                }
+            ],
+            "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
+            "homepage": "http://aws.amazon.com/sdkforphp",
+            "keywords": [
+                "amazon",
+                "aws",
+                "cloud",
+                "dynamodb",
+                "ec2",
+                "glacier",
+                "s3",
+                "sdk"
+            ],
+            "time": "2021-02-03T21:12:51+00:00"
+        },
         {
             "name": "cebe/markdown",
             "version": "1.2.1",
@@ -410,6 +473,57 @@
                 }
             ],
             "time": "2020-11-13T08:04:11+00:00"
+        },
+        {
+            "name": "craftcms/aws-s3",
+            "version": "1.2.11",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/d9934e0d34c3a1617a5e120d58b7062f8d302751",
+                "reference": "d9934e0d34c3a1617a5e120d58b7062f8d302751",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.5",
+                "league/flysystem-aws-s3-v3": "^1.0.28"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Amazon S3",
+                "handle": "aws-s3",
+                "documentationUrl": "https://github.com/craftcms/aws-s3/blob/master/README.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\awss3\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Amazon S3 integration for Craft CMS",
+            "keywords": [
+                "aws",
+                "cms",
+                "craftcms",
+                "flysystem",
+                "s3",
+                "yii2"
+            ],
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/aws-s3/issues?state=open",
+                "source": "https://github.com/craftcms/aws-s3",
+                "docs": "https://github.com/craftcms/aws-s3/blob/master/README.md",
+                "rss": "https://github.com/craftcms/aws-s3/commits/master.atom"
+            },
+            "time": "2020-08-24T09:31:11+00:00"
         },
         {
             "name": "craftcms/cms",
@@ -1721,6 +1835,43 @@
             "time": "2020-07-26T07:20:36+00:00"
         },
         {
+            "name": "league/flysystem-aws-s3-v3",
+            "version": "1.0.29",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/4e25cc0582a36a786c31115e419c6e40498f6972",
+                "reference": "4e25cc0582a36a786c31115e419c6e40498f6972",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php": "^3.20.0",
+                "league/flysystem": "^1.0.40",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Flysystem\\AwsS3v3\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Flysystem adapter for the AWS S3 SDK v3.x",
+            "time": "2020-10-08T18:58:37+00:00"
+        },
+        {
             "name": "league/oauth2-client",
             "version": "2.6.0",
             "dist": {
@@ -2121,6 +2272,53 @@
                 "source": "https://github.com/mrclay/Props/tree/master"
             },
             "time": "2019-11-26T17:56:10+00:00"
+        },
+        {
+            "name": "mtdowling/jmespath.php",
+            "version": "2.6.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmespath/jmespath.php/zipball/42dae2cbd13154083ca6d70099692fef8ca84bfb",
+                "reference": "42dae2cbd13154083ca6d70099692fef8ca84bfb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0 || ^8.0",
+                "symfony/polyfill-mbstring": "^1.17"
+            },
+            "bin": [
+                "bin/jp.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JmesPath\\": "src/"
+                },
+                "files": [
+                    "src/JmesPath.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Declaratively specify how to extract elements from a JSON document",
+            "keywords": [
+                "json",
+                "jsonpath"
+            ],
+            "time": "2020-07-31T21:01:56+00:00"
         },
         {
             "name": "opis/closure",
@@ -4137,6 +4335,58 @@
             "time": "2020-02-11T15:31:23+00:00"
         },
         {
+            "name": "vaersaagod/dospaces",
+            "version": "1.1.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vaersaagod/dospaces/zipball/7f16553db44a7df127233f843467c6e70fa9655c",
+                "reference": "7f16553db44a7df127233f843467c6e70fa9655c",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0",
+                "league/flysystem-aws-s3-v3": "^1.0.28"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "DigitalOcean Spaces Volume",
+                "handle": "dospaces",
+                "changelogUrl": "https://raw.githubusercontent.com/vaersaagod/dospaces/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/vaersaagod/dospaces/archive/master.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "vaersaagod\\dospaces\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Værsågod",
+                    "homepage": "https://www.vaersaagod.no/"
+                }
+            ],
+            "description": "DigitalOcean Spaces integration for Craft CMS",
+            "keywords": [
+                "aws",
+                "cms",
+                "craftcms",
+                "digitalocean",
+                "flysystem",
+                "spaces",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/vaersaagod/dospaces/issues?state=open",
+                "source": "https://github.com/vaersaagod/dospaces",
+                "docs": "https://github.com/vaersaagod/dospaces",
+                "rss": "https://github.com/vaersaagod/dospaces/commits/master.atom"
+            },
+            "time": "2020-08-24T13:21:40+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v3.6.7",
             "dist": {
@@ -4770,6 +5020,102 @@
                 "source": "https://github.com/voku/urlify/tree/master"
             },
             "time": "2019-12-13T02:57:54+00:00"
+        },
+        {
+            "name": "weareferal/remote-core",
+            "version": "1.4.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weareferal/craft-remote-core/zipball/351875a5d3612dcf32d568ac2d6ae7166e058084",
+                "reference": "351875a5d3612dcf32d568ac2d6ae7166e058084",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Required for AWS S3 or Digital Ocean Spaces usage",
+                "google/apiclient": "Required for Google Drive usage",
+                "kunalvarma05/dropbox-php-sdk": "Required for Dropbox usage"
+            },
+            "type": "craft-module",
+            "extra": {
+                "name": "Remote Core",
+                "handle": "remote-core",
+                "changelogUrl": "https://raw.githubusercontent.com/weareferal/craft-remote-core/master/CHANGELOG.md",
+                "class": "weareferal\\remotecore\\RemoteCoreModule"
+            },
+            "autoload": {
+                "psr-4": {
+                    "weareferal\\remotecore\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Timmy O'Mahony",
+                    "homepage": "https://weareferal.com"
+                }
+            ],
+            "description": "Backend module for remote-sync and remote-backup",
+            "time": "2020-12-11T12:51:22+00:00"
+        },
+        {
+            "name": "weareferal/remote-sync",
+            "version": "1.4.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weareferal/craft-remote-sync/zipball/1f2f7bd00e6b01a99b02c2fba4da673dfed8258d",
+                "reference": "1f2f7bd00e6b01a99b02c2fba4da673dfed8258d",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1",
+                "weareferal/remote-core": "1.4.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Required for AWS S3 or Digital Ocean Spaces usage",
+                "google/apiclient": "Required for Google Drive usage",
+                "kunalvarma05/dropbox-php-sdk": "Required for Dropbox usage"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Remote Sync",
+                "handle": "remote-sync",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/weareferal/craft-remote-sync/master/CHANGELOG.md",
+                "class": "weareferal\\remotesync\\RemoteSync"
+            },
+            "autoload": {
+                "psr-4": {
+                    "weareferal\\remotesync\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Timmy O'Mahony",
+                    "homepage": "https://weareferal.com"
+                }
+            ],
+            "description": "Sync your database and assets across Craft environments",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "sync"
+            ],
+            "support": {
+                "docs": "https://github.com/weareferal/craft-remote-sync/blob/master/README.md",
+                "issues": "https://github.com/weareferal/craft-remote-sync/issues"
+            },
+            "time": "2020-12-11T12:50:59+00:00"
         },
         {
             "name": "webmozart/assert",
