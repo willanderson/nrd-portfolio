@@ -16,7 +16,8 @@
       {% set thumbnail = post.thumbnail.one() %}
       <div class="row green">
         <div class="flex main">
-            <div class="mr3 image-hold" style="background-image: url('{{ thumbnail.url }}');"></div>
+
+            <div class="mr3 image-hold" {% if thumbnail | length %} style="background-image: url('{{ thumbnail.url }}');"{% endif %}></div>
 
           <a target="_blank" {% if post.externalLink %} href="{{ post.externalLink }}" {% endif %} class="title no-underline">{{ post.title | truncate(95) }}</a>
         </div>
