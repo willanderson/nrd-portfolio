@@ -12,11 +12,9 @@
 
 {% set path = craft.app.request.pathInfo %}
 
-  <body class="{% if path|length %} {{ path }} {% else %}home {% endif %}mb6">
+  <body class="{% if path|length %} {{ path }} {% else %}home {% endif %}">
     {% include "_includes/nav" %}
-    <div class="container mx-auto px-4">
       {% block content %}{% endblock %}
-    </div>
   </body>
   <script src="/app.js"></script>
 </html>

@@ -41,7 +41,7 @@ h1 {
 }
 
 .vh-calc-100 {
-    height: calc(100vh - 75px);
+    height: calc(100vh - 91px);
 }
 
 .hr {
@@ -81,11 +81,21 @@ nav li {
 }
 
 
+.intro {
+  overflow: hidden;
+}
+
+.show .intro {
+  overflow: hidden;
+  opacity: .5;
+}
 
 .nav-small {
   overflow: hidden;
   opacity: 0;
   display: none;
+  background-color: inherit;
+  color: inherit;
 }
 
 .show .nav-small {
@@ -118,6 +128,12 @@ nav li {
   top: 0;
   left: 0;
   z-index: -1;
+  filter: none;
+  overflow: hidden;
+}
+
+.show .bgImage {
+  filter: blur(2px);
 }
 
 /* Generic Grid */

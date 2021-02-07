@@ -1,13 +1,13 @@
 enableVersioning: true
-handle: video
-name: Video
+handle: independent
+name: Independent
 propagationMethod: all
 siteSettings:
   9e92814a-721a-4b15-ad0e-5862784c6bd0:
     enabledByDefault: true
     hasUrls: true
-    template: video/_entry
-    uriFormat: 'video/{slug}'
+    template: indepndent/_entry
+    uriFormat: 'independent/{slug}'
 structure:
   maxLevels: null
   uid: ebcf8a7f-1985-4492-b67c-8594bdfc8d64
