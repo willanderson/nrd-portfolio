@@ -1,0 +1,70 @@
+field: d96757da-3410-4126-a8ce-283e484a0f54
+fieldLayouts:
+  9cf98a13-f15d-46be-ba8e-33a613a3eefd:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 8e7a2d5a-29be-4e41-ba66-cfe172414770
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b43ba4a7-5c0e-410e-8793-9082d479e6a8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  8e7a2d5a-29be-4e41-ba66-cfe172414770:
+    contentColumnType: text
+    fieldGroup: null
+    handle: itemTitle
+    instructions: ''
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b43ba4a7-5c0e-410e-8793-9082d479e6a8:
+    contentColumnType: string
+    fieldGroup: null
+    handle: itemURL
+    instructions: ''
+    name: Section
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: item
+name: Item
+sortOrder: 1

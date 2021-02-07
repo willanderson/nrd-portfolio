@@ -8,4 +8,7 @@ siteSettings:
     hasUrls: true
     template: editorial/index
     uriFormat: 'editorial/{slug}'
-type: channel
+structure:
+  maxLevels: null
+  uid: d3d6fff2-2d43-49dd-9fda-7b899b00e1f2
+type: structure

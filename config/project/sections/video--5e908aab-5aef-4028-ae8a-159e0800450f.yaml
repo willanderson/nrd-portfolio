@@ -8,4 +8,7 @@ siteSettings:
     hasUrls: true
     template: video/_entry
     uriFormat: 'video/{slug}'
-type: channel
+structure:
+  maxLevels: null
+  uid: ebcf8a7f-1985-4492-b67c-8594bdfc8d64
+type: structure

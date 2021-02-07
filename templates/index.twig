@@ -1,21 +1,12 @@
 {% extends "_layout" %}
 
 {% block content %}
-  <section class="intro pv5">
+  <section class="intro pv5 white">
     <div class="fixed-container center">
       <span class="f1 serif">
         {{ entry.siteIntro | striptags('<a><b><em><strong><img>') | raw }}
       </span>
     </div>
   </section>
-
-  <section class="featured-work">
-    <div class="fixed-container center grid">
-      <div class="work-item bg-red span-4">
-        <video autoplay="autoplay" loop="loop" muted="muted">
-          <source src="{{ entry.preview }}" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </section>
+  <div class="bgImage"></div>
 {% endblock %}

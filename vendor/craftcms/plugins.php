@@ -94,4 +94,42 @@ return array (
     'changelogUrl' => 'https://raw.githubusercontent.com/vaersaagod/dospaces/master/CHANGELOG.md',
     'downloadUrl' => 'https://github.com/vaersaagod/dospaces/archive/master.zip',
   ),
+  'olivestudio/craft-olivemenus' => 
+  array (
+    'class' => 'olivestudio\\olivemenus\\Olivemenus',
+    'basePath' => $vendorDir . '/olivestudio/craft-olivemenus/src',
+    'handle' => 'olivemenus',
+    'aliases' => 
+    array (
+      '@olivestudio/olivemenus' => $vendorDir . '/olivestudio/craft-olivemenus/src',
+    ),
+    'name' => 'Olivemenus',
+    'version' => '1.2.1',
+    'description' => 'A powerful menus plugin for Craft 3 built for the need of simplicity and flexibility',
+    'developer' => 'Olive Studio',
+    'developerUrl' => 'https://www.olivestudio.net/',
+    'documentationUrl' => 'https://github.com/OliveStudio/olivemenus/blob/master/README.md',
+    'changelogUrl' => 'https://raw.githubusercontent.com/OliveStudio/olivemenus/master/CHANGELOG.md',
+    'hasCpSettings' => false,
+    'hasCpSection' => true,
+    'components' => 
+    array (
+      'olivemenusService' => 'olivestudio\\olivemenus\\services\\OlivemenusService',
+    ),
+  ),
+  'sebastianlenz/linkfield' => 
+  array (
+    'class' => 'typedlinkfield\\Plugin',
+    'basePath' => $vendorDir . '/sebastianlenz/linkfield/src',
+    'handle' => 'typedlinkfield',
+    'aliases' => 
+    array (
+      '@typedlinkfield' => $vendorDir . '/sebastianlenz/linkfield/src',
+    ),
+    'name' => 'Typed link field',
+    'version' => '1.0.24',
+    'description' => 'A Craft field type for selecting links',
+    'developer' => 'Sebastian Lenz',
+    'developerUrl' => 'https://github.com/sebastian-lenz/',
+  ),
 );

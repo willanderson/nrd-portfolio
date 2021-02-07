@@ -1,19 +1,23 @@
 {% import "_macros/active.twig" as macros %}
 
+
 <nav>
   <div class="fixed-container flex justify-between items-center w-100 center">
     <h1>
-      <a class="no-underline" href="/">Nora Deligter</a>
+      <a class="no-underline serif" href="/">Nora DeLigter</a>
     </h1>
     <ul class="nav-ns db-ns dn">
       <li>
-        <a class="no-underline{{ macros.is_active('creative') }}" href="/creative">Creative</a>
+        <a class="serif no-underline{{ macros.is_active('independent') }}" href="/independent">Independent</a>
       </li>
       <li>
-        <a class="no-underline{{ macros.is_active('editorial') }}" href="/editorial">Editorial</a>
+        <a class="serif no-underline{{ macros.is_active('agency') }}" href="/agency">Agency</a>
       </li>
       <li>
-        <a class="no-underline{{ macros.is_active('About') }}" href="/about">About</a>
+        <a class="serif no-underline{{ macros.is_active('editorial') }}" href="/editorial">Editorial</a>
+      </li>
+      <li>
+        <a class="serif no-underline{{ macros.is_active('About') }}" href="/about">About</a>
       </li>
     </ul>
     <ul class="dn-ns db">
@@ -28,13 +32,16 @@
 
   <ul class="fixed-container w-100 center serif black">
     <li class="bb b--silver">
-      <a class="no-underline{{ macros.is_active('creative') }}" href="/creative">↳ Creative</a>
+      <a class="no-underline serif" href="/independent">↳ Indepndent</a>
     </li>
     <li class="bb b--silver">
-      <a class="no-underline{{ macros.is_active('editorial') }}" href="/editorial">↳ Editorial</a>
+      <a class="no-underline serif" href="/agency">↳ Agency</a>
+    </li>
+    <li class="bb b--silver">
+      <a class="no-underline serif" href="/editorial">↳ Editorial</a>
     </li>
     <li>
-      <a class="no-underline{{ macros.is_active('About') }}" href="/about">↳ About</a>
+      <a class="no-underline serif" href="/about">↳ About</a>
     </li>
   </ul>
 

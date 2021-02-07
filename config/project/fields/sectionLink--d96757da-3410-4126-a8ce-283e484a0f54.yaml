@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: dcdb4f29-2a0e-41d3-a7b8-b3c2e39d9abb
+handle: sectionLink
+instructions: ''
+name: URL
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

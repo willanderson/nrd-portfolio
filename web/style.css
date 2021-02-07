@@ -1,5 +1,5 @@
 * {
-  font-family: sans-serif;
+  font-family: "Times New Roman";
 }
 
 ul, li {
@@ -16,6 +16,7 @@ a {
 
 h1,h2,h3,h4,h5 {
   font-weight: normal;
+  font-family: "Times New Roman";
 }
 
 h1 {
@@ -60,6 +61,11 @@ h1 {
   color: #FF000E;
 }
 
+.home {
+  background-color: transparent;
+  color: #fff;
+}
+
 /* Nav */
 
 
@@ -98,6 +104,20 @@ nav li {
   width: 100%;
   max-width: 1080px;
   padding: 0px 16px;
+}
+
+.bgImage {
+  background: url(assets/editorial/hero.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* Generic Grid */

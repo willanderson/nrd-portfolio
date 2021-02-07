@@ -63,6 +63,7 @@ class ComposerStaticInit9d5900b99174a49cc7ff3248bc8b94cb
         ),
         't' => 
         array (
+            'typedlinkfield\\' => 15,
             'tubalmartin\\CssMin\\' => 19,
         ),
         's' => 
@@ -72,6 +73,10 @@ class ComposerStaticInit9d5900b99174a49cc7ff3248bc8b94cb
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'o' => 
+        array (
+            'olivestudio\\olivemenus\\' => 23,
         ),
         'm' => 
         array (
@@ -281,6 +286,10 @@ class ComposerStaticInit9d5900b99174a49cc7ff3248bc8b94cb
         array (
             0 => __DIR__ . '/..' . '/vaersaagod/dospaces/src',
         ),
+        'typedlinkfield\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sebastianlenz/linkfield/src',
+        ),
         'tubalmartin\\CssMin\\' => 
         array (
             0 => __DIR__ . '/..' . '/tubalmartin/cssmin/src',
@@ -294,6 +303,10 @@ class ComposerStaticInit9d5900b99174a49cc7ff3248bc8b94cb
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'olivestudio\\olivemenus\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/olivestudio/craft-olivemenus/src',
         ),
         'modules\\' => 
         array (
