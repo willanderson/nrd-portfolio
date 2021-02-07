@@ -1,1 +1,79 @@
-{% extends "/work/_entry" %}
+{% extends "_layout" %}
+{% import "_macros/calc.twig" as macros %}
+
+
+
+{% block content %}
+  <div class="grid fixed-container center">
+    {% for block in entry.sections %}
+      {% switch block.type %}
+      {% case 'media' %}
+        {% for asset in block.assets %}
+          {% if asset.kind == "image" %}
+            <div class="img-wrapper {{macros.span(block.assets)}}">
+              <img src="{{ asset.url }}"/>
+            </div>
+          {% else %}
+            {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
+            {% set width = embeddedAsset.width %}
+            {% set height = embeddedAsset.height %}
+            {% set code = embeddedAsset.html %}
+            <div class="frame-wrapper {{macros.span(block.assets)}} {{macros.ratio(width, height, code)}}">
+              {{ embeddedAsset.html }}
+            </div>
+          {% endif %}
+        {% endfor %}
+        {% case 'text' %}
+      <div class="span-4 pv6 {% if block.sectionHeight == 'large' %} vh-calc-100 {% endif %} bg-white flex justify-center items-center">
+            <div class="measure-wide center">
+              <div class="f4 lh-copy serif">
+                {{ block.copy }}
+              </div>
+            </div>
+          </div>
+          {% endswitch %}
+        {% endfor %}
+      </div>
+
+      <div class="grid fixed-container center mb5">
+
+      <div class="hr span-4"></div>
+
+          {# Project Name #}
+          <div class="agencyTitle-small span-1">
+            <h1 class="f5 lh-copy ma0">
+              <span class="fw6 db">{{ entry.client}}</span>
+              {{ entry.title}}
+            </h1>
+          </div>
+
+          {# Project Description #}
+          {% if entry.description|length %}
+            <div class="agencyTitle-small span-2">
+              <p class="f5 lh-copy ma0">
+                {{entry.description | striptags('<a><b><em><strong><img>') | raw}}
+              </p>
+            </div>
+          {% endif %}
+          {# Project Date #}
+          <div class="agencyTitle-small span-1">
+            <h1 class="f5 lh-copy ma0">
+              {{ entry.date | date('M Y') }}
+            </h1>
+          </div>
+
+          {# Project Credits #}
+          {% if entry.credits|length and entry.credits[0].creditsName %}
+          <div class="agencyTitle-small span-1">
+          Credits:
+            <ul class="ma0">
+            {% for row in entry.credits %}
+              <li class="f5 lh-copy mt1">
+                  {{row.creditsRole}}: {{row.creditsName}}
+              </li>
+            {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+{% endblock %}
