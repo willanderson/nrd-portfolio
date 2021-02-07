@@ -15,14 +15,11 @@
 
       {% set thumbnail = post.thumbnail.one() %}
       <div class="row green">
-        <div class="flex main">
 
-            <div class="mr3 image-hold" {% if thumbnail | length %} style="background-image: url('{{ thumbnail.url }}');"{% endif %}></div>
-
-          <a target="_blank" {% if post.externalLink %} href="{{ post.externalLink }}" {% endif %} class="title no-underline">{{ post.title | truncate(95) }}</a>
-        </div>
-        <p class="publication tr">{{ post.client }}</p>
-        <p class="date tr">{{ post.date | date('M d, Y') }}</p>
+        <div class="image-hold" {% if thumbnail | length %} style="background-image: url('{{ thumbnail.url }}');"{% endif %}></div>
+        <a target="_blank" {% if post.externalLink %} href="{{ post.externalLink }}" {% endif %} class="title no-underline">{{ post.title | truncate(95) }}</a>
+        <p class="publication tl tr-l">{{ post.client }}</p>
+        <p class="date tl tr-l">{{ post.date | date('M d, Y') }}</p>
       </div>
 
     {% endfor %}

@@ -6,8 +6,7 @@
     <div class="fixed-container center grid mt4">
       {% for post in posts %}
 
-        <div>
-
+        <div class="span-2">
           {% if post.thumbnail | length %}
             {% set thumbnail = post.thumbnail.one() %}
             <a class="no-underline" href="{{ post.url }}">

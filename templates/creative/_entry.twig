@@ -4,7 +4,7 @@
 {% block content %}
 
 
-  <div class="agency-grid fixed-container center">
+  <div class="grid fixed-container center">
     {% for block in entry.sections %}
       {% switch block.type %}
       {% case 'media' %}
@@ -37,10 +37,10 @@
 
       <div class="grid fixed-container center">
 
-      <div class="hr grid-col-100"></div>
+      <div class="hr span-4"></div>
 
           {# Project Name #}
-          <div class="agencyTitle-small">
+          <div class="agencyTitle-small span-1">
             <h1 class="f5 lh-copy ma0">
               <span class="fw6 db">{{ entry.client}}</span>
               {{ entry.title}}
@@ -49,14 +49,14 @@
 
           {# Project Description #}
           {% if entry.description|length %}
-            <div class="agencyTitle-small grid-col-50">
+            <div class="agencyTitle-small span-2">
               <p class="f5 lh-copy ma0">
                 {{entry.description | striptags('<a><b><em><strong><img>') | raw}}
               </p>
             </div>
           {% endif %}
           {# Project Date #}
-          <div class="agencyTitle-small">
+          <div class="agencyTitle-small span-1">
             <h1 class="f5 lh-copy ma0">
               {{ entry.date | date('M Y') }}
             </h1>
@@ -64,7 +64,7 @@
 
           {# Project Credits #}
           {% if entry.credits|length and entry.credits[0].creditsName %}
-          <div class="agencyTitle-small">
+          <div class="agencyTitle-small span-1">
           Credits:
             <ul class="ma0">
             {% for row in entry.credits %}

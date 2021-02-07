@@ -5,7 +5,7 @@
     <h1>
       <a class="no-underline" href="/">Nora Deligter</a>
     </h1>
-    <ul>
+    <ul class="nav-ns db-ns dn">
       <li>
         <a class="no-underline{{ macros.is_active('creative') }}" href="/creative">Creative</a>
       </li>
@@ -16,5 +16,26 @@
         <a class="no-underline{{ macros.is_active('About') }}" href="/about">About</a>
       </li>
     </ul>
+    <ul class="dn-ns db">
+      <li>
+        <a id="toggle" class="no-underline" href="#">Menu</a>
+      </li>
+    </ul>
   </div>
 </nav>
+
+<div class="nav-small w-100 bt bb bg-near-white">
+
+  <ul class="fixed-container w-100 center serif black">
+    <li class="bb b--silver">
+      <a class="no-underline{{ macros.is_active('creative') }}" href="/creative">↳ Creative</a>
+    </li>
+    <li class="bb b--silver">
+      <a class="no-underline{{ macros.is_active('editorial') }}" href="/editorial">↳ Editorial</a>
+    </li>
+    <li>
+      <a class="no-underline{{ macros.is_active('About') }}" href="/about">↳ About</a>
+    </li>
+  </ul>
+
+</div>
