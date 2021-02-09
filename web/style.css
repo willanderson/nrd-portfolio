@@ -108,16 +108,23 @@ nav li {
   color: inherit;
 }
 
+.show {
+  overflow: hidden;
+}
+
 .show .nav-small {
   height: 100%;
   display: block;
   opacity: 1;
+  display: fixed;
+  height: 100vh;
+  width: 100vh;
 }
 
 .nav-small li {
   display: block;
   padding: 1em 0;
-  font-size: 40px;
+  font-size: 1.5em;
 }
 
 .fixed-container {
@@ -143,7 +150,7 @@ nav li {
 }
 
 .show .bgImage {
-  filter: blur(2px);
+  /* filter:grayscale(100); */
 }
 
 /* Generic Grid */
