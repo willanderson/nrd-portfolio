@@ -5,9 +5,9 @@ propagationMethod: all
 siteSettings:
   9e92814a-721a-4b15-ad0e-5862784c6bd0:
     enabledByDefault: true
-    hasUrls: true
-    template: editorial/index
-    uriFormat: 'editorial/{slug}'
+    hasUrls: false
+    template: null
+    uriFormat: null
 structure:
   maxLevels: null
   uid: d3d6fff2-2d43-49dd-9fda-7b899b00e1f2

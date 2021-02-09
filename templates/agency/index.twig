@@ -2,7 +2,6 @@
 {% set posts = craft.entries.section('agency').all() %}
 
 
-
 {% block content %}
 
 <section class="work-all">
@@ -20,8 +19,7 @@
           <a class="no-underline" href="{{ post.url }}">
             <h3 class="ma0 mt2">{{post.client}}{% if post.client %}: {% endif %}{{ post.title|truncate(60) }}</h3>
           </a>
-          <h4 class="ma0 gray mt2">{{ post.role.one() }}</h4>
-
+          {% if post.role %}<h4 class="ma0 gray mt2">{{ post.role.one() }}</h4>  {% endif %}
 
         </div>
       {% endfor %}

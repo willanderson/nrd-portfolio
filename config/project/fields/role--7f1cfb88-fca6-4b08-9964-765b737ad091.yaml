@@ -8,16 +8,15 @@ settings:
   allowLimit: false
   allowMultipleSources: false
   allowSelfRelations: false
-  branchLimit: ''
   limit: null
   localizeRelations: false
   selectionLabel: ''
-  showSiteMenu: false
-  source: 'group:c40b2bfd-2b3c-4d7a-8973-92eca28355a3'
+  showSiteMenu: true
+  source: 'taggroup:3b8441de-c86f-43a8-9ec3-1d1d4ad97e69'
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site
-type: craft\fields\Categories
+type: craft\fields\Tags

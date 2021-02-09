@@ -61,6 +61,16 @@ h1 {
   color: #FF000E;
 }
 
+.agency {
+  background-color: #F3F7FF;
+  color: #0057FF;
+}
+
+.independent {
+  background-color: #FDF3CB;
+  color: #695F00;
+}
+
 .home {
   background-color: transparent;
   color: #fff;
@@ -232,13 +242,6 @@ nav li {
   flex-shrink: 0;
 }
 
-/* .table .row .main {
-  grid-column: auto / span 2;
-} */
-
-.title::after {
-  content: " ↗";
-}
 
 .title:hover {
   text-decoration: underline;

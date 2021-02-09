@@ -1,0 +1,34 @@
+contentColumnType: string
+fieldGroup: b729f8c2-6fbf-49b5-9428-60db6a9ec52c
+handle: indexLayout
+instructions: ''
+name: 'Index Layout'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Grid
+        -
+          - value
+          - grid
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Table
+        -
+          - value
+          - table
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

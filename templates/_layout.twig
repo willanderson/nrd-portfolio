@@ -10,7 +10,7 @@
     <link href="/style.css" rel="stylesheet">
   </head>
 
-{% set path = craft.app.request.pathInfo %}
+{% set path = craft.app.request.pathInfo|split('/')|first %}
 
   <body class="{% if path|length %} {{ path }} {% else %}home {% endif %}">
     {% include "_includes/nav" %}
