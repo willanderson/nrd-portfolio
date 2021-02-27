@@ -1,7 +1,7 @@
 {% extends "_layout" %}
 
 {% block content %}
-<div class="fixed-container center">
+<div class="fixed-container center mv4">
 {% if entry.paragraph|length %}
   <p class="text-block f1 serif red">
     {{ entry.paragraph | striptags('<a><b><em><strong><img>') | raw }}

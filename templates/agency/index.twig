@@ -4,8 +4,8 @@
 
 {% block content %}
 
-<section class="work-all pb5">
-  <div class="fixed-container center grid mt4">
+<section class="work-all">
+  <div class="fixed-container center grid mv4">
     {% for post in posts %}
 
       <div class="span-2">
@@ -19,7 +19,7 @@
           <a class="no-underline" href="{{ post.url }}">
             <h3 class="ma0 mt2">{{post.client}}{% if post.client %}: {% endif %}{{ post.title|truncate(60) }}</h3>
           </a>
-          {% if post.role %}<h4 class="ma0 gray mt2">{{ post.role.one() }}</h4>  {% endif %}
+        {% if post.role %}<h4 class="ma0 o-80 mt2">{{ post.role.one() }}</h4>{% endif %}
 
         </div>
       {% endfor %}
