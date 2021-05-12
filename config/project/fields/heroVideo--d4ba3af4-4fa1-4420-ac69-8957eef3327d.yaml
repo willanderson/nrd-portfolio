@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: ba7dea8e-3741-400a-befa-a7bd91ac3c82
+handle: heroVideo
+instructions: ''
+name: 'Hero Video'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: 'Vimeo URL'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url
