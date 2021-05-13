@@ -10,49 +10,23 @@
 
 use craft\helpers\App;
 
-return [
-    // Global settings
-    '*' => [
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
-        'defaultWeekStartDay' => 1,
+return array(
+  'localhost' => array(
+    'devMode' => true,
+    'siteUrl' => 'http://localhost',
+    'environmentVariables' => array(
+      'basePath' => '/Users/will/Projects/craft/web',
+      'baseUrl'  => 'http://localhost/',
+    ),
+    'testToEmailAddress' => 'wmaxand@gmail.com',
+  ),
 
-        // Whether generated URLs should omit "index.php"
-        'omitScriptNameInUrls' => true,
-
-        // Control panel trigger word
-        'cpTrigger' => 'admin',
-
-        // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => App::env('SECURITY_KEY'),
-    ],
-
-    // Dev environment settings
-    'dev' => [
-        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => true,
-
-        // Prevent crawlers from indexing pages and following links
-        'disallowRobots' => true,
-    ],
-
-    // Staging environment settings
-    'staging' => [
-        // Set this to `false` to prevent administrative changes from being made on Staging
-        'allowAdminChanges' => true,
-
-        // Don’t allow updates on Staging
-        'allowUpdates' => false,
-
-        // Prevent crawlers from indexing pages and following links
-        'disallowRobots' => true,
-    ],
-
-    // Production environment settings
-    'production' => [
-        // Set this to `false` to prevent administrative changes from being made on Production
-        'allowAdminChanges' => true,
-
-        // Don’t allow updates on Production
-        'allowUpdates' => false,
-    ],
-];
+  // Use IP address of your droplet below
+  '12.34.56.78' => array(
+    'siteUrl' => 'http://68.183.141.24/',
+    'environmentVariables' => array(
+      'basePath' => '/var/www/web/nrd-portfolio/web',
+      'baseUrl'  => 'http://68.183.141.24/',
+    )
+  )
+);
