@@ -3,12 +3,13 @@
 }
 
 body, html {
+  height: auto;
   min-height: 100%;
-  height: 100%;
 }
 
 body {
   position: relative;
+  padding: 0 32px;
 }
 
 ul, li {
@@ -80,13 +81,13 @@ h1 {
 }
 
 .home {
-  background-color: transparent;
+  background-color: black;
   color: #fff;
 }
 
 /* Nav */
 nav {
-  background-color: inherit;
+  background-color: transparent;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -131,12 +132,12 @@ nav li {
   padding: 1em 0;
   font-size: 1.5em;
 }
-
+/*
 .fixed-container {
   width: 100%;
   max-width: 1080px;
   padding: 0px 32px;
-}
+} */
 
 .bgImage {
   background: url(assets/editorial/hero.jpeg) no-repeat center center fixed;
