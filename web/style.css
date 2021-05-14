@@ -2,6 +2,11 @@
   font-family: "Times New Roman";
 }
 
+body {
+  display: block;
+  overflow: hidden;
+}
+
 ul, li {
   display: inline-block;
   line-height: 100%;

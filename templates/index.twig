@@ -8,7 +8,7 @@
     </divs>
   </div>
 </section>
-{# <div class="vimeo-wrapper">
+<div class="vimeo-wrapper">
   <iframe
     scrolling="no"
     src="{% if entry.heroVideo | length %} {{ entry.heroVideo }} {% else %}https://player.vimeo.com/video/546564412?title=0&byline=0&portrait=0&color=000000&muted=1&autoplay=1&autopause=0&loop=1&background=1&app_id=122963{% endif %}"
@@ -16,11 +16,7 @@
     webkitallowfullscreen="webkitallowfullscreen"
     mozallowfullscreen="mozallowfullscreen"
     allowfullscreen="allowfullscreen"></iframe>
-</div> #}
-
-
-<div class="vimeo-wrapper">
-   <iframe src="https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&byline=0&title=0"
-           frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
+
+
 {% endblock %}
