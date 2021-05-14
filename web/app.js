@@ -1,3 +1,5 @@
+  $(document).ready(function(){
+
 var target = document.querySelector('#toggle');
 var menu = document.querySelector('body');
 
@@ -10,3 +12,5 @@ target.onclick = function() {
       x.innerHTML = "Menu";
     }
 }
+
+});

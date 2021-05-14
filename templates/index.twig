@@ -1,16 +1,20 @@
 {% extends "_layout" %}
 
 {% block content %}
-  <section class="intro white vh-calc-100 mt4 ">
-    <div class="fixed-container center pb4">
-      <div class="f1-ns f2 serif measure-narrow">
-        {{ entry.siteIntro | striptags('<a><b><em><strong><img>') | raw }}
-      </divs>
-    </div>
-  </section>
-  <div class="vimeo-wrapper">
-<iframe scrolling="no" src="{% if entry.heroVideo | length %} {{ entry.heroVideo }} {% else %}https://player.vimeo.com/video/546564412?title=0&byline=0&portrait=0&color=000000&muted=1&autoplay=1&autopause=0&loop=1&background=1&app_id=122963{% endif %}"
-           frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-   </iframe>
+<section class="intro white vh-calc-100 mt4 ">
+  <div class="fixed-container center pb4">
+    <div class="f1-ns f2 serif measure-narrow">
+      {{ entry.siteIntro | striptags('<a><b><em><strong><img>') | raw }}
+    </divs>
+  </div>
+</section>
+<div class="vimeo-wrapper">
+  <iframe
+    scrolling="no"
+    src="{% if entry.heroVideo | length %} {{ entry.heroVideo }} {% else %}https://player.vimeo.com/video/546564412?title=0&byline=0&portrait=0&color=000000&muted=1&autoplay=1&autopause=0&loop=1&background=1&app_id=122963{% endif %}"
+    frameborder="0"
+    webkitallowfullscreen="webkitallowfullscreen"
+    mozallowfullscreen="mozallowfullscreen"
+    allowfullscreen="allowfullscreen"></iframe>
 </div>
 {% endblock %}
