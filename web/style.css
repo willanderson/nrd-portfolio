@@ -2,6 +2,10 @@
   font-family: "Times New Roman";
 }
 
+html, body {
+  height: 100%;
+}
+
 ul, li {
   display: inline-block;
   line-height: 100%;
@@ -121,12 +125,6 @@ nav li {
   display: block;
   padding: 1em 0;
   font-size: 1.5em;
-}
-
-.fixed-container {
-  width: 100%;
-  max-width: 1080px;
-  padding: 0px 16px;
 }
 
 .bgImage {
@@ -452,7 +450,7 @@ nav li {
 .fixed-container {
   width: 100%;
   max-width: 1080px;
-  padding: 0px 16px;
+  padding: 0px 32px;
 }
 
 .bgImage {
@@ -655,7 +653,7 @@ nav li {
 /* Vimeo */
 
 .vimeo-wrapper {
-   position: fixed;
+   position: absolute;
    top: 0;
    left: 0;
    width: 100%;
