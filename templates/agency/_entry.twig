@@ -39,42 +39,33 @@
 
       <div class="hr span-4"></div>
 
-          {# Project Name #}
-          <div class="agencyTitle-small span-1">
-            <h1 class="f5 lh-copy ma0">
-              <span class="fw6 db">{{ entry.client}}</span>
-              {{ entry.title}}
-            </h1>
-          </div>
-
-          {# Project Description #}
-          {% if entry.description|length %}
-            <div class="agencyTitle-small span-2">
-              <p class="f5 lh-copy ma0">
-                {{entry.description | striptags('<a><b><em><strong><img>') | raw}}
-              </p>
-            </div>
-          {% endif %}
-          {# Project Date #}
-          <div class="agencyTitle-small span-1">
-            <h1 class="f5 lh-copy ma0">
-              {{ entry.date | date('M Y') }}
-            </h1>
-          </div>
-
-          {# Project Credits #}
-          {% if entry.credits|length and entry.credits[0].creditsName %}
-          <div class="agencyTitle-small span-1">
-          Credits:
-            <ul class="ma0">
-            {% for row in entry.credits %}
-              <li class="f5 lh-copy mt1">
-                  {{row.creditsRole}}: {{row.creditsName}}
-              </li>
-            {% endfor %}
-            </ul>
-          </div>
-        {% endif %}
+      {# Project Name #}
+      <div class="agencyTitle-small span-3">
+      <h1 class="f5 lh-copy ma0 fw6">
+      {{ entry.title}}
+      </h1>
+        <h2 class="f5 lh-copy ma0">
+      {{ entry.client}}{% if entry.client|length %} · {% endif %} {{ entry.date | date('M Y') }}
+        </h2>
+        <p class="f4 lh-copy ma0 mt3 measure">
+          {{entry.description | striptags('<a><b><em><strong><img>') | raw}}
+        </p>
       </div>
 
+
+      {# Project Credits #}
+      {% if entry.credits|length and entry.credits[0].creditsName %}
+      <div class="agencyTitle-small span-1">
+      <div class="fw6">Credits:</div>
+        <ul class="ma0">
+        {% for row in entry.credits %}
+          <li class="f5 lh-copy mt2 db">
+              <div class="f6 ttu fw5 w-100">{{row.creditsRole}}</div>
+              <div>{{row.creditsName}}</div>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
 {% endblock %}

@@ -9,7 +9,8 @@ body, html {
 
 body {
   position: relative;
-  padding: 0 32px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 ul, li {
@@ -51,33 +52,40 @@ h1 {
 }
 
 .vh-calc-100 {
-  height: calc(100vh - 91px);
+  height: calc(100vh - 128px);
 }
 
 .hr {
-  border-top: 1px solid black;
-  margin-top: 16px;
+  border-top: 1px solid;
+  margin-top: 32px;
+  border-color: rgba(0, 0, 0, .2);;
 }
+
+
 
 /* Color Blocks */
 .editorial {
   background-color: #F8FEFA;
   color: #019C49;
+  border-color: #019C49;
 }
 
 .about {
   background-color: #fff1f3;
   color: #FF000E;
+  border-color: #FF000E;
 }
 
 .agency {
   background-color: #F3F7FF;
   color: #0057FF;
+  border-color: #0057FF;
 }
 
 .independent {
   background-color: #FDF3CB;
   color: #695F00;
+  border-color: #695F00;
 }
 
 .home {
@@ -91,6 +99,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 999;
+  min-height: 96px;
 }
 
 nav li {
@@ -167,6 +176,10 @@ nav li {
 .span-4, .span-2, .span-1, .span-3 {
   grid-column: span 4;
 }
+
+ .span-3 {
+   grid-column: auto / span 3;
+ }
 
 @media only screen and (min-width: 30em) {
   .span-2 {
