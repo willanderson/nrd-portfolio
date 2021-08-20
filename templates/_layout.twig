@@ -16,7 +16,7 @@
 
 {% set path = craft.app.request.pathInfo|split('/')|first %}
 
-<body class="ph5-ns ph4 {% if path|length %} {{ path }} {% else %}home {% endif %}">
+<body class="ph4 {% if path|length %} {{ path }} {% else %}home {% endif %}">
     {% include "_includes/nav" %}
       {% block content %}{% endblock %}
   </body>
