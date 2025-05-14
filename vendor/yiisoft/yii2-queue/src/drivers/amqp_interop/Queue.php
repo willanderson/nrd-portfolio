@@ -1,8 +1,8 @@
 <?php
 /**
- * @link http://www.yiiframework.com/
+ * @link https://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
+ * @license https://www.yiiframework.com/license/
  */
 
 namespace yii\queue\amqp_interop;
@@ -15,6 +15,7 @@ use Enqueue\AmqpTools\RabbitMqDlxDelayStrategy;
 use Interop\Amqp\AmqpConnectionFactory;
 use Interop\Amqp\AmqpConsumer;
 use Interop\Amqp\AmqpContext;
+use Interop\Amqp\AmqpDestination;
 use Interop\Amqp\AmqpMessage;
 use Interop\Amqp\AmqpQueue;
 use Interop\Amqp\AmqpTopic;
@@ -26,6 +27,8 @@ use yii\queue\cli\Queue as CliQueue;
 
 /**
  * Amqp Queue.
+ *
+ * @property-read AmqpContext $context
  *
  * @author Maksym Kotliar <kotlyar.maksim@gmail.com>
  * @since 2.0.2
@@ -41,7 +44,7 @@ class Queue extends CliQueue
     const ENQUEUE_AMQP_BUNNY = 'enqueue/amqp-bunny';
 
     /**
-     * The connection to the borker could be configured as an array of options
+     * The connection to the broker could be configured as an array of options
      * or as a DSN string like amqp:, amqps:, amqps://user:pass@localhost:1000/vhost.
      *
      * @var string
@@ -108,6 +111,12 @@ class Queue extends CliQueue
      */
     public $persisted;
     /**
+     * Send keep-alive packets for a socket connection
+     * @var bool
+     * @since 2.3.6
+     */
+    public $keepalive;
+    /**
      * The connection will be established as later as possible if set true.
      *
      * @var bool|null
@@ -169,11 +178,51 @@ class Queue extends CliQueue
      */
     public $queueName = 'interop_queue';
     /**
+     * Setting optional arguments for the queue (key-value pairs)
+     * ```php
+     * [
+     *    'x-expires' => 300000,
+     *    'x-max-priority' => 10
+     * ]
+     * ```
+     *
+     * @var array
+     * @since 2.3.3
+     * @see https://www.rabbitmq.com/queues.html#optional-arguments
+     */
+    public $queueOptionalArguments = [];
+    /**
+     * Set of flags for the queue
+     * @var int
+     * @since 2.3.5
+     * @see AmqpDestination
+     */
+    public $queueFlags = AmqpQueue::FLAG_DURABLE;
+    /**
      * The exchange used to publish messages to.
      *
      * @var string
      */
     public $exchangeName = 'exchange';
+    /**
+     * The exchange type. Can take values: direct, fanout, topic, headers
+     * @var string
+     * @since 2.3.3
+     */
+    public $exchangeType = AmqpTopic::TYPE_DIRECT;
+    /**
+     * Set of flags for the exchange
+     * @var int
+     * @since 2.3.5
+     * @see AmqpDestination
+     */
+    public $exchangeFlags = AmqpTopic::FLAG_DURABLE;
+    /**
+     * Routing key for publishing messages. Default is NULL.
+     *
+     * @var string|null
+     */
+    public $routingKey;
     /**
      * Defines the amqp interop transport being internally used. Currently supports lib, ext and bunny values.
      *
@@ -181,17 +230,24 @@ class Queue extends CliQueue
      */
     public $driver = self::ENQUEUE_AMQP_LIB;
     /**
-     * This property should be an integer indicating the maximum priority the queue should support. Default is 10.
-     *
-     * @var int
-     */
-    public $maxPriority = 10;
-    /**
      * The property contains a command class which used in cli.
      *
      * @var string command class name
      */
     public $commandClass = Command::class;
+    /**
+     * Headers to send along with the message
+     * ```php
+     * [
+     *    'header-1' => 'header-value-1',
+     *    'header-2' => 'header-value-2',
+     * ]
+     * ```
+     *
+     * @var array
+     * @since 3.0.0
+     */
+    public $setMessageHeaders = [];
 
     /**
      * Amqp interop context.
@@ -224,10 +280,10 @@ class Queue extends CliQueue
             $this->close();
         });
 
-        if (extension_loaded('pcntl') && PHP_MAJOR_VERSION >= 7) {
+        if (extension_loaded('pcntl') && function_exists('pcntl_signal') && PHP_MAJOR_VERSION >= 7) {
             // https://github.com/php-amqplib/php-amqplib#unix-signals
             $signals = [SIGTERM, SIGQUIT, SIGINT, SIGHUP];
-            
+
             foreach ($signals as $signal) {
                 $oldHandler = null;
                 // This got added in php 7.1 and might not exist on all supported versions
@@ -310,8 +366,13 @@ class Queue extends CliQueue
         $message->setDeliveryMode(AmqpMessage::DELIVERY_MODE_PERSISTENT);
         $message->setMessageId(uniqid('', true));
         $message->setTimestamp(time());
-        $message->setProperty(self::ATTEMPT, 1);
-        $message->setProperty(self::TTR, $ttr);
+        $message->setProperties(array_merge(
+            $this->setMessageHeaders,
+            [
+                self::ATTEMPT => 1,
+                self::TTR => $ttr,
+            ]
+        ));
 
         $producer = $this->context->createProducer();
 
@@ -323,6 +384,10 @@ class Queue extends CliQueue
         if ($priority) {
             $message->setProperty(self::PRIORITY, $priority);
             $producer->setPriority($priority);
+        }
+
+        if (null !== $this->routingKey) {
+            $message->setRoutingKey($this->routingKey);
         }
 
         $producer->send($topic, $message);
@@ -373,6 +438,7 @@ class Queue extends CliQueue
             'connection_timeout' => $this->connectionTimeout,
             'heartbeat' => $this->heartbeat,
             'persisted' => $this->persisted,
+            'keepalive' => $this->keepalive,
             'lazy' => $this->lazy,
             'qos_global' => $this->qosGlobal,
             'qos_prefetch_size' => $this->qosPrefetchSize,
@@ -405,16 +471,16 @@ class Queue extends CliQueue
         }
 
         $queue = $this->context->createQueue($this->queueName);
-        $queue->addFlag(AmqpQueue::FLAG_DURABLE);
-        $queue->setArguments(['x-max-priority' => $this->maxPriority]);
+        $queue->setFlags($this->queueFlags);
+        $queue->setArguments($this->queueOptionalArguments);
         $this->context->declareQueue($queue);
 
         $topic = $this->context->createTopic($this->exchangeName);
-        $topic->setType(AmqpTopic::TYPE_DIRECT);
-        $topic->addFlag(AmqpTopic::FLAG_DURABLE);
+        $topic->setType($this->exchangeType);
+        $topic->setFlags($this->exchangeFlags);
         $this->context->declareTopic($topic);
 
-        $this->context->bind(new AmqpBind($queue, $topic));
+        $this->context->bind(new AmqpBind($queue, $topic, $this->routingKey));
 
         $this->setupBrokerDone = true;
     }

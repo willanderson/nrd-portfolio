@@ -118,6 +118,7 @@ class Minify
             'quiet' => false, // serve() will send headers and output
             'debug' => false,
             'concatOnly' => false,
+            'invalidate' => false,
 
             // if you override these, the response codes MUST be directly after
             // the first space.
@@ -242,7 +243,7 @@ class Minify
             if (! $this->options['quiet']) {
                 $this->errorExit($this->options['badRequestHeader'], self::URL_DEBUG);
             } else {
-                list(,$statusCode) = explode(' ', $this->options['badRequestHeader']);
+                list(, $statusCode) = explode(' ', $this->options['badRequestHeader']);
 
                 return array(
                     'success' => false,
@@ -284,6 +285,7 @@ class Minify
             'lastModifiedTime' => $this->options['lastModifiedTime'],
             'isPublic' => $this->options['isPublic'],
             'encoding' => $this->options['encodeMethod'],
+            'invalidate' => $this->options['invalidate'],
         );
 
         if ($this->options['maxAge'] > 0) {
@@ -470,7 +472,7 @@ class Minify
     public function errorExit($header, $url = '', $msgHtml = '')
     {
         $url = htmlspecialchars($url, ENT_QUOTES);
-        list(,$h1) = explode(' ', $header, 2);
+        list(, $h1) = explode(' ', $header, 2);
         $h1 = htmlspecialchars($h1);
         // FastCGI environments require 3rd arg to header() to be set
         list(, $code) = explode(' ', $header, 3);
@@ -593,7 +595,8 @@ class Minify
                     ! $source                        // yes, we ran out of sources
                     || $type === self::TYPE_CSS      // yes, to process CSS individually (avoiding PCRE bugs/limits)
                     || $minifier !== $lastMinifier   // yes, minifier changed
-                    || $options !== $lastOptions)) { // yes, options changed
+                    || $options !== $lastOptions     // yes, options changed
+                )) {
                 // minify previous sources with last settings
                 $imploded = implode($implodeSeparator, $groupToProcessTogether);
                 $groupToProcessTogether = array();

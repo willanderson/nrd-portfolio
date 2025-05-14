@@ -5,18 +5,18 @@ declare(strict_types=1);
 namespace Arrayy;
 
 /**
- * @template   XKey of array-key
+ * @template   XKey as array-key
  * @template   X
- * @implements \Iterator<XKey,X>
+ * @extends  \ArrayIterator<XKey,X>
  *
  * @internal
  */
-class ArrayyRewindableGenerator implements \Iterator
+class ArrayyRewindableGenerator extends \ArrayIterator
 {
     /**
      * @var string
      *
-     * @phpstan-var string|class-string<\Arrayy\Arrayy<TKey,T>>
+     * @phpstan-var string|class-string<\Arrayy\Arrayy<XKey,X>>
      */
     protected $class;
 
@@ -38,10 +38,12 @@ class ArrayyRewindableGenerator implements \Iterator
     protected $onRewind;
 
     /**
-     * @param callable $generatorConstructionFunction a callable that should return a Generator
-     * @param callable $onRewind                      callable that gets invoked with 0 arguments after the iterator
-     *                                                was rewinded
-     * @param string   $class
+     * @param callable      $generatorConstructionFunction
+     *                                                     <p>A callable that should return a Generator.</p>
+     * @param callable|null $onRewind
+     *                                                     <p>Callable that gets invoked with 0 arguments after the iterator
+     *                                                     was rewinded.</p>
+     * @param string        $class
      *
      * @throws \InvalidArgumentException
      */
@@ -66,6 +68,7 @@ class ArrayyRewindableGenerator implements \Iterator
      *
      * @phpstan-return X
      */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return $this->generator->current();
@@ -81,6 +84,7 @@ class ArrayyRewindableGenerator implements \Iterator
      *
      * @phpstan-return XKey
      */
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return $this->generator->key();
@@ -94,6 +98,7 @@ class ArrayyRewindableGenerator implements \Iterator
      * @see  http://php.net/manual/en/iterator.next.php
      * @see  Iterator::next
      */
+    #[\ReturnTypeWillChange]
     public function next()
     {
         $this->generator->next();
@@ -107,6 +112,7 @@ class ArrayyRewindableGenerator implements \Iterator
      * @see  http://php.net/manual/en/iterator.rewind.php
      * @see  Iterator::rewind
      */
+    #[\ReturnTypeWillChange]
     public function rewind()
     {
         $this->generateGenerator();

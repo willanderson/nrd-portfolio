@@ -5,11 +5,50 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.14] - 2023-05-05
+
+- Support monolog v3, [#705]
+- Allow invalidation from manual invocation, [#700]
+- Add property declaration, [#699]
+
+[3.0.14]: https://github.com/mrclay/minify/compare/3.0.13...3.0.14
+[#705]: https://github.com/mrclay/minify/pull/705
+[#700]: https://github.com/mrclay/minify/pull/700
+[#699]: https://github.com/mrclay/minify/pull/699
+
+## [3.0.13] - 2022-10-03
+
+- Add `Minify_Cache_APCu` to replace `Minify_Cache_APC`, [#697]
+- Require `marcusschwarz/lesserphp:^0.5.5` to fix php 7.4 compatibility, [#688]
+
+[3.0.13]: https://github.com/mrclay/minify/compare/3.0.12...3.0.13
+[#697]: https://github.com/mrclay/minify/pull/697
+[#688]: https://github.com/mrclay/minify/pull/688
+
+## [3.0.12] - 2022-05-14
+
+- Update jquery to 1.12.4 to avoid xss attacks, [#692]
+- Fix null argument to preg_split, [#696], [#695]
+
+[3.0.12]: https://github.com/mrclay/minify/compare/3.0.11...3.0.12
+[#692]: https://github.com/mrclay/minify/pull/692
+[#696]: https://github.com/mrclay/minify/pull/696
+[#695]: https://github.com/mrclay/minify/issues/695
+
+## [3.0.11] - 2021-03-11
+
+- PHP 8.0 support, [#685], [#682], [#677]
+
+[3.0.11]: https://github.com/mrclay/minify/compare/3.0.10...3.0.11
+[#685]: https://github.com/mrclay/minify/pull/685
+[#682]: https://github.com/mrclay/minify/pull/682
+[#677]: https://github.com/mrclay/minify/pull/677
+
 ## [3.0.10] - 2020-04-02
 
-- Exclude SSI Comments from HTML minify, [#670]
+- Exclude SSI Comments from HTML minify, [#670], [#671]
 
-[3.0.10]: https://github.com/mrclay/minify/compare/3.0.8...3.0.10
+[3.0.10]: https://github.com/mrclay/minify/compare/3.0.9...3.0.10
 [#671]: https://github.com/mrclay/minify/issues/671
 [#670]: https://github.com/mrclay/minify/pull/670
 

@@ -10,7 +10,6 @@ namespace Arrayy\Collection;
 
 use Arrayy\Arrayy;
 use Arrayy\ArrayyIterator;
-use Arrayy\ArrayyRewindableGenerator;
 use Arrayy\Type\TypeInterface;
 use Arrayy\TypeCheck\TypeCheckArray;
 use Arrayy\TypeCheck\TypeCheckInterface;
@@ -29,18 +28,6 @@ use Arrayy\TypeCheck\TypeCheckSimple;
  */
 abstract class AbstractCollection extends Arrayy implements CollectionInterface
 {
-    /**
-     * @var array
-     * @phpstan-var array<T>
-     */
-    protected $array = [];
-
-    /**
-     * @var ArrayyRewindableGenerator|null
-     * @phpstan-var \Arrayy\ArrayyRewindableGenerator<TKey,T>|null
-     */
-    protected $generator;
-
     /**
      * @var bool
      */
@@ -134,6 +121,7 @@ abstract class AbstractCollection extends Arrayy implements CollectionInterface
             return $this;
         }
 
+        /* @phpstan-ignore-next-line | special? */
         $return = parent::append($value, $key);
         $this->array = $return->array;
         $this->generator = null;
@@ -142,8 +130,16 @@ abstract class AbstractCollection extends Arrayy implements CollectionInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Assigns a value to the specified offset + check the type.
+     *
+     * @param int|string|null $offset
+     * @param mixed           $value
+     *
+     * @return void
+     *
+     * @phpstan-param T $value
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (
@@ -188,6 +184,7 @@ abstract class AbstractCollection extends Arrayy implements CollectionInterface
             return $this;
         }
 
+        /* @phpstan-ignore-next-line | special? */
         $return = parent::prepend($value, $key);
         $this->array = $return->array;
         $this->generator = null;
@@ -211,7 +208,9 @@ abstract class AbstractCollection extends Arrayy implements CollectionInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @return array
+     *
+     * @phpstan-return array<T>
      */
     public function getCollection(): array
     {
@@ -219,7 +218,11 @@ abstract class AbstractCollection extends Arrayy implements CollectionInterface
     }
 
     /**
-     * {@inheritdoc}
+     * The type (FQCN) associated with this collection.
+     *
+     * @return string|string[]|TypeCheckArray|TypeCheckInterface[]
+     *
+     * @phpstan-return string|string[]|class-string|class-string[]|TypeCheckArray<array-key,TypeCheckInterface>|TypeCheckInterface[]
      */
     abstract public function getType();
 
@@ -257,11 +260,12 @@ abstract class AbstractCollection extends Arrayy implements CollectionInterface
      * @return static
      *                <p>(Immutable) Returns an new instance of the CollectionInterface object.</p>
      *
-     * @template     TKeyCreate as int|string
-     * @template     TCreate
-     * @phpstan-param  array<TKeyCreate,TCreate> $data
+     * @template TKeyCreate as TKey
+     * @template TCreate as T
+     * @phpstan-param array<TKeyCreate,TCreate> $data
      * @phpstan-param  class-string<\Arrayy\ArrayyIterator> $iteratorClass
      * @phpstan-return static<TKeyCreate,TCreate>
+     *
      * @psalm-mutation-free
      */
     public static function create(
@@ -290,7 +294,9 @@ abstract class AbstractCollection extends Arrayy implements CollectionInterface
     {
         // init
         $return = static::create();
+
         $jsonObject = \json_decode($json, false);
+
         $mapper = new \Arrayy\Mapper\Json();
         $mapper->undefinedPropertyHandler = static function ($object, $key, $jsonValue) use ($return) {
             if ($return->checkForMissingPropertiesInConstructor) {
@@ -320,6 +326,7 @@ abstract class AbstractCollection extends Arrayy implements CollectionInterface
             }
         }
 
+        /** @phpstan-var static<int,T> */
         return $return;
     }
 
@@ -376,7 +383,6 @@ abstract class AbstractCollection extends Arrayy implements CollectionInterface
             ||
             $is_array = \is_array($type)
         ) {
-            /** @noinspection CallableParameterUseCaseInTypeContextInspection */
             $type = TypeCheckArray::create(
                 [
                     Arrayy::ARRAYY_HELPER_TYPES_FOR_ALL_PROPERTIES => new TypeCheckSimple($is_array ? $type : (string) $type),
